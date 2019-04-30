@@ -10,14 +10,15 @@ max = int(input('How many sides should be on the dice?'))
 dice = int(input('How many dice shall I roll?'))
 
 #play again variable
-rollAgain = 'yes'
+rollAgain = 'y'
 
 #rolling the dice while loop
-while rollAgain == 'yes' or rollAgain == 'y':
+while rollAgain.lower() == 'y':
     print('Rolling the Dice!')
     print('The Dice are...')
     for number in range(0, dice):
         print(random.randint(min, max))
-    print('Do you want to roll again?')
-    rollAgain = input(': ')
+    rollAgain = str(input('Do you want to roll again?y/n:'))
+    if rollAgain == 'n':
+        break
 
