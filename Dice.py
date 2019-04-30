@@ -17,8 +17,7 @@ while rollAgain == 'yes' or rollAgain == 'y':
     print('Rolling the Dice!')
     print('The Dice are...')
     for number in range(0, dice):
-    number_current = random.randint(min, max)
-    print(number_current)
+        print(random.randint(min, max))
     print('Do you want to roll again?')
     rollAgain = input(': ')
 
